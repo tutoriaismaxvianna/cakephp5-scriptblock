@@ -73,6 +73,11 @@ class PagesController extends AppController
 
     public function starter()
     {
+
+    }
+
+    public function jumbotron()
+    {
         
     }
 }

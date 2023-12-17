@@ -7,11 +7,11 @@
       </a>
     </header>
 
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div id="jumbotron" class="p-5 mb-4 bg-body-tertiary rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Custom jumbotron</h1>
         <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-        <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        <button id="btnTest" class="btn btn-primary btn-lg" type="button">Example button</button>
       </div>
     </div>
 
@@ -37,3 +37,21 @@
     </footer>
   </div>
 </main>
+
+<?php $this->Html->script('https://code.jquery.com/jquery-3.7.1.min.js', ['block' => true]) ?>
+
+<?php
+  $this->Html->scriptStart(['block' => true]);
+  echo '
+    $("#btnTest").click(function(){
+      $("#jumbotron").hide();
+    });
+  ';
+  $this->Html->scriptEnd();
+?>
+
+<?php
+  $this->Html->scriptStart(['block' => true]);
+  echo "alert('I am in the JavaScript');";
+  $this->Html->scriptEnd();
+?>

@@ -154,3 +154,6 @@
     Created by the Bootstrap team &middot; &copy; 2023
   </footer>
 </div>
+
+
+<?php $this->Html->scriptBlock('alert("Testando scriptBlock")', ['block' => true]); ?>

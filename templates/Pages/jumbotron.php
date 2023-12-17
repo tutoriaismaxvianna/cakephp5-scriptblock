@@ -38,13 +38,29 @@
   </div>
 </main>
 
-<?php $this->Html->script('https://code.jquery.com/jquery-3.7.1.min.js', ['block' => true]) ?>
+<?php $this->Html->script([
+  'https://code.jquery.com/jquery-3.7.1.min.js',
+  'https://cdn.jsdelivr.net/npm/sweetalert2@11'
+  ], 
+  ['block' => true]) ?>
 
 <?php
   $this->Html->scriptStart(['block' => true]);
   echo '
     $("#btnTest").click(function(){
       $("#jumbotron").hide();
+    });
+  ';
+  $this->Html->scriptEnd();
+?>
+
+<?php
+  $this->Html->scriptStart(['block' => 'sweetAlert']);
+  echo '
+    Swal.fire({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success"
     });
   ';
   $this->Html->scriptEnd();

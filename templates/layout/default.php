@@ -12,6 +12,7 @@
 
     <?= $this->Html->css('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css') ?>
     <?= $this->fetch('css') ?>
+    <?= $this->fetch('myCss') ?>
 </head>
 
 <body>
